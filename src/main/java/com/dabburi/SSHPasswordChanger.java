@@ -70,8 +70,9 @@ public class SSHPasswordChanger {
                 } else if (output.toString().contains("New password:")) {
                     printStream.println(newPassword);
                     output.setLength(0);
-                } else if (output.toString().contains("Enter the new password again:")) {
+                } else if (output.toString().contains("Re-enter")) {
                     printStream.println(newPassword);
+                    System.out.println();
                     break;
                 }
 
